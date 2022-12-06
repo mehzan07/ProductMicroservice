@@ -29,7 +29,11 @@ namespace ProductMicroservice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<ProductContext>(o => o.UseSqlServer(Configuration.GetConnectionString("ProductsDBConString")));
+            //This is for local db connection string
+            // services.AddDbContext<ProductContext>(o => o.UseSqlServer(Configuration.GetConnectionString("ProductsDBConString")));
+            //This is Azure Database connection string
+            services.AddDbContext<ProductContext>(o => o.UseSqlServer(Configuration.GetConnectionString("AZURE_SQL_CONNECTION")));
+           
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddSwaggerGen(c =>
             {
