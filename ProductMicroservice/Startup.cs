@@ -61,14 +61,14 @@ namespace ProductMicroservice
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                
-                    app.UseSwagger();
-                    app.UseSwaggerUI(c =>
-                    {
-                        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
-                        c.RoutePrefix = string.Empty;
-                    });
             }
+            // Allow Swagger UI loads in production Environment too (as Azure App Service)
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 

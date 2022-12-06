@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/productmicroservicesqlserver/databases/ProductMicroservice_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:ProductsDBConString"
+    },
+    "apis1": {
+      "apiEndpoint": "https://productmicroserviceapi.azure-api.net/",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/ProductMicroserviceapi/apis/ProductMicroservice",
+      "type": "apis.azure"
+    }
+  }
+}
