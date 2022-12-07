@@ -49,5 +49,16 @@
             <response code="200">Returned if the Product has been found and deleted </response>
             <response code="400">Returned if the Prodcut could not be found for  deletion with ProductId</response>
         </member>
+        <member name="T:ProductMicroservice.DBContexts.ProductContext">
+            <summary>
+            DbContext to reach the database
+            </summary>
+        </member>
+        <member name="M:ProductMicroservice.DBContexts.ProductContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{ProductMicroservice.DBContexts.ProductContext})">
+            <summary>
+            DbContext to reach the database
+            </summary>
+            <param name="options"></param>
+        </member>
     </members>
 </doc>
