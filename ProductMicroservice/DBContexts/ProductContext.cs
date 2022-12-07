@@ -3,8 +3,15 @@ using ProductMicroservice.Models;
 
 namespace ProductMicroservice.DBContexts
 {
+    /// <summary>
+    /// DbContext to reach the database
+    /// </summary>
     public class ProductContext : DbContext
     {
+        /// <summary>
+        /// DbContext to reach the database
+        /// </summary>
+        /// <param name="options"></param>
         public ProductContext(DbContextOptions<ProductContext> options) : base(options)
         {
         }
