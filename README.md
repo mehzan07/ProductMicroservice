@@ -23,5 +23,5 @@ Testing with post man you should use as following formats :
 Use “Name ” : “Iphone” NOT Name : “Iphone”
 This project with using of VS and runing with IIS Express going fine.
 But with Runing with docker has follwoing problem with connection to the database:
-# this comment is from vs code
+# this comment is from vs code to github or azure devops
 
